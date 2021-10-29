@@ -1,0 +1,34 @@
+
+section.portfolio#portfolio
+  .container
+    .portfolio__inner
+
+      h2.biography__title.title= jsonPortfolio.title
+
+      ul.portfolio__list
+        each item in jsonPortfolio.preview
+          li.portfolio__item
+            article.card
+              header.card__header
+                h2.visually-hidden= item.name
+                .card__images
+                  picture
+                    source(media="(min-width: 1200px)", srcset=`assets/img/${item.img}-xl.webp, assets/img/${item.img}-xl@2x.webp 2x, assets/img/${item.img}-xl@3x.webp 3x`, type="image/webp")
+                    source(media="(min-width: 1200px)", srcset=`assets/img/${item.img}-xl.png, assets/img/${item.img}-xl@2x.png 2x, assets/img/${item.img}-xl@3x.png 3x`, type="image/png")
+                    source(media="(max-width: 1199px)", srcset=`assets/img/${item.img}-all.webp, assets/img/${item.img}-all@2x.webp 2x, assets/img/${item.img}-all@3x.webp 3x`, type="image/webp")
+                    img(src=`assets/img/${item.img}-all.png`, srcset=`assets/img/${item.img}-all@2x.png 2x, assets/img/${item.img}-all@3x.png 3x`, alt="").card__img
+                  .card__category= item.category
+                ul.card__info
+                  li.card__item= item.organization
+                  li.card__item= item.view
+                  li.card__item= item.category
+              footer.card__footer
+                a(href=item.link target="_blank").card__link На сайт
+                a(href="").card__link Подробнее
+        li.portfolio__item
+          .more
+            .more__title= jsonPortfolio.still.title
+            .more__text= jsonPortfolio.still.subtitle
+            button(type="button").more__button.button= jsonPortfolio.still.btn
+
+

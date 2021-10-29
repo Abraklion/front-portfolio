@@ -1,0 +1,30 @@
+
+.container {
+  min-width: 320px;
+  width: 100%;
+
+  padding: 0 15px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  @media (max-width: $viewport-xs) {
+
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $viewport-md) {
+    max-width: $viewport-md;
+  }
+
+  @media (min-width: $viewport-lg) {
+    max-width: $viewport-lg;
+  }
+
+  @media (min-width: $viewport-xl) {
+    max-width: $viewport-xl;
+  }
+}

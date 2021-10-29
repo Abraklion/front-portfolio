@@ -1,0 +1,28 @@
+
+section.skills#skills
+  .container
+    .skills__inner
+
+      h2.skills__title.title= jsonSkills.title
+
+      each item in jsonSkills.skills
+        section.skills__box
+          h3.skills__category= item.category
+
+          .skills__carousel
+            each val in item.list
+              .skills__item
+                article.element
+                  header.element__header
+                    img(src=`assets/img/${val.icon}`, width="123", height="123", alt=val.name).element__img
+                    h4.element__title= val.name
+                    p.element__description= val.description
+                  footer.element__footer
+                    .element__name= val.name
+                    ul.element__list
+                      li.element__item
+                        .element__text Использовал в проектах
+                        .element__quantity= val.quantity
+                      li.element__item
+                        .element__text Уровень владения
+                        .element__level= val.level
