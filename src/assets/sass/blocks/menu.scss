@@ -1,0 +1,48 @@
+
+.menu {
+  @include list();
+}
+
+.menu__item {
+  text-align: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($border-header,$border-opacity-header);
+  }
+}
+
+.menu__link {
+  display: block;
+
+  padding: 18px 0;
+
+  line-height: 0;
+
+  color: $color-icon;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-hover-icon;
+  }
+
+  &:focus {
+    color: $color-hover-icon;
+
+    outline-offset: -2px;
+  }
+
+  &:active {
+    color: $color-hover-icon;
+  }
+
+}
+
+.menu__svg {
+  width: 27px;
+  height: 27px;
+
+  fill: currentColor;
+}

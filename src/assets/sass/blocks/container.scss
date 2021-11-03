@@ -3,7 +3,7 @@
   min-width: 320px;
   width: 100%;
 
-  padding: 0 15px;
+  padding: 0 12px;
   margin: 0 auto;
 
   box-sizing: border-box;
@@ -13,18 +13,18 @@
   }
 
   @media (min-width: $viewport-sm) {
-    padding: 0 20px;
+    max-width: $viewport-sm - 36px;
   }
 
   @media (min-width: $viewport-md) {
-    max-width: $viewport-md;
+    max-width: $viewport-md - 48px;
   }
 
   @media (min-width: $viewport-lg) {
-    max-width: $viewport-lg;
+    max-width: $viewport-lg - 32px;
   }
 
   @media (min-width: $viewport-xl) {
-    max-width: $viewport-xl;
+    max-width: $viewport-xl - 60px;
   }
 }

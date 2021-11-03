@@ -11,7 +11,7 @@ module.exports = function () {
       .pipe($.gp.if($.config.toggle.fullJs, $.gulp.dest($.config.output.pathJs)))
 
       .pipe($.gp.sourcemaps.init())
-      .pipe($.gp.uglify())
+      .pipe($.uglify())
       .pipe($.gp.rename({
         suffix: ".min",
         extname: ".js"

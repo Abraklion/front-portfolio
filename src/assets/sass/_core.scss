@@ -1,7 +1,7 @@
 
 //-----===== Базовые настройки ====-----//
 
-html{
+html {
   font-size: $font-size-basic;
   line-height: $line-height-basic;
 }
@@ -9,15 +9,16 @@ html{
 body {
   min-width: 320px;
 
+  background-color: $primary-bg;
+
   font-style: $font-style-basic;
   font-weight: $font-weight-basic;
   font-family: $font-family-basic;
 
-  color: $black;
+  color: $text-color;
 
   overflow-wrap: break-word;
   word-wrap: break-word;
-
 }
 
 *,

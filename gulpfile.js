@@ -5,6 +5,7 @@ global.$ = {
   gp: require('gulp-load-plugins')(),
   browserSync: require('browser-sync').create(),
   autoprefixer: require('autoprefixer'),
+  uglify: require('gulp-uglify-es').default,
   fs: require('fs'),
   del: require('del'),
 
@@ -13,7 +14,7 @@ global.$ = {
 
     toggle: {
       minHtml: false, // true / false
-      fullCss: false, // true / false
+      fullCss: true, // true / false
       fullJs: false, // true / false
       resizeImg: false, // true / false
       mediaEndFile: false, // true / false

@@ -4,10 +4,10 @@
 // Стили шрифтов по умолчанию
 $font-style-basic: normal;
 $font-weight-basic: 400;
-$font-size-basic: 16px;
-$font-family-basic: "Arial", sans-serif;
+$font-size-basic: 15px;
+$font-family-basic: "Rubik", sans-serif;
 
-$line-height-basic: 1.5;
+$line-height-basic: 26px;
 
 // Контрольные точки
 $viewport-xs: 575px;
@@ -16,7 +16,53 @@ $viewport-md: 768px;
 $viewport-lg: 992px;
 $viewport-xl: 1200px;
 
-// Цвета
+// цвета
 $white: #ffffff;
-
 $black: #000000;
+
+// Стили сайта
+
+/* первичный цвет фона: "биография" "мои навыки" "подвал сайта" "карточка портфолио подробно" */
+$primary-bg: #0E0E17;
+
+/* вторичный цвет фона: "первый экран" "портфолио" "контакты" */
+$secondary-bg: $black;
+
+/* основной цвет текста */
+$text-color: $white;
+
+/* голотип , пункты меню , бутерброд,
+первый экран: "Front-End разработчик",
+биография: "рамка лица" "интересный факт",
+мои навыки: "линия" "рамка вокруг количества проектов" "индикатор уровень владения",
+404: "цифры 404" */
+$primary: #FF9301;
+
+/* карточка портфолио подробно,
+контакты: иконки */
+$secondary: #FFB44E;
+
+/* цвет круга заголовка, прозрачность */
+$round: #E88E15; $round-opacity: 0.5;
+
+
+
+// Шапка
+
+$bg-header: #0C0C14; // фон меню
+$border-header: $white; $border-opacity-header: 0.1; // цвет рамки и прозрачность
+
+/* Логогип */
+$color-text: $white; // цвет текста
+$text-logo: "HK"; // буквы логотипа
+$border-color: $black; $border-opacity: 0.42; // цвет обводки и прозрачность у букв логотипа
+$bg-logo: $primary; // фон логотипа
+
+/* Иконки меню */
+$color-icon: $white; // цвет иконок
+$color-hover-icon: $primary; // цвет иконок при наведении
+
+/* Бургер */
+$bg-burger: $primary; // фон кнопки
+$color-line: $white; // цвет линий бургера
+
