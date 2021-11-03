@@ -8,6 +8,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 10;
 
   padding: 5px;
 
@@ -34,6 +35,10 @@
                 0 -9px 0 0 $color-line;
 
     transition: transform 0.1s linear, box-shadow 0.1s linear;
+  }
+
+  &:focus{
+    outline: none;
   }
 
   &--active{
