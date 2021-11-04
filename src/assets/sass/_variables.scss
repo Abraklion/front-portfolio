@@ -42,9 +42,6 @@ $primary: #FF9301;
 контакты: иконки */
 $secondary: #FFB44E;
 
-/* цвет круга заголовка, прозрачность */
-$round: #E88E15; $round-opacity: 0.5;
-
 
 
 // Шапка
@@ -79,5 +76,20 @@ $bg-button-hover: transparent; // фон кнопки при наведении
 $border-button: $white; // цвет рамки кнопки
 $text-button: $black; // цвет текста кнопки
 $text-button-hover: $white; // цвет текста кнопки при наведении
+
+
+// Биография
+$bg-biography: $primary-bg; // фон биография
+$border-biography: $primary; // рамка вокруг лица
+$border-social: $white; // рамка вокруг иконок социальных сетей
+$bg-border-social: $black; // фон иконок социальных сетей
+$bg-border-social-hover: $primary; // фон иконок социальных сетей при наведении
+$color-social-icon: $white; // цвет иконок
+$color-text-biography: $white; $opacity-text-biography: 0.8;// цвет текста биографии и прозрачность
+$color-fact: $primary;// цвет текста "Интересный факт"
+
+/* Заголовок */
+$title-color: $white; // цвет заголовка
+$round: #E88E15; $round-opacity: 0.5; // цвет круга заголовка, прозрачность
 
 

@@ -3,7 +3,8 @@ section.portfolio#portfolio
   .container
     .portfolio__inner
 
-      h2.portfolio__title.title= jsonPortfolio.title
+      h2.portfolio__title.title
+        span= jsonPortfolio.title
 
       ul.portfolio__list
         each item in jsonPortfolio.preview

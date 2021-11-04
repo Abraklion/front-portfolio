@@ -3,7 +3,8 @@ section.skills#skills
   .container
     .skills__inner
 
-      h2.skills__title.title= jsonSkills.title
+      h2.skills__title.title
+        span= jsonSkills.title
 
       each item in jsonSkills.skills
         section.skills__box

@@ -1,4 +1,41 @@
 
 .title {
+  margin: 0;
 
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: $title-color;
+
+  text-align: center;
+
+  span{
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      content: "";
+
+      width: 45px;
+      height: 45px;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+
+      margin: -22px 0 0 0;
+
+      background-color: rgba($round,$round-opacity);
+
+      border-radius: 50%;
+
+      animation-name: round;
+      animation-duration: 2.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
 }
