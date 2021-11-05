@@ -1,16 +1,41 @@
 
 .more {
+  padding: 43px 0;
 
+  background-color: $bg-more;
+
+  border: 2px solid $border-more;
+
+  color: $color-text-more;
 }
 
 .more__title {
+  margin: 0 0 25px 0;
 
+  font-size: 14px;
+  line-height: 17px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  opacity: 0.8;
 }
 
 .more__text {
+  margin: 0 0 25px 0;
 
+  font-size: 12px;
+  line-height: 14px;
+
+  text-align: center;
+
+  opacity: 0.5;
 }
 
 .more__button {
+  display: block;
 
+  width: 163px;
+
+  margin: 0 auto;
 }
