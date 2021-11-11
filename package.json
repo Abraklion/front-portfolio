@@ -54,5 +54,8 @@
     "defaults",
     "not IE 11",
     "maintained node versions"
-  ]
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
 }

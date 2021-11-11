@@ -1,20 +1,84 @@
 
 .form{
-
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  row-gap: 18px;
 }
 
 .form__element {
-
+  display: flex;
 }
 
 .form__input {
+  flex: 1 1 auto;
 
+  padding: 12px;
+
+  background-color: transparent;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Rubik', sans-serif;
+
+  color: $color-contacts;
+
+  border: 1px solid rgba($color-contacts, 0.3);
+
+  transition: border 0.3s ease, color 0.3s ease;
+
+  &::placeholder{
+    color: rgba($color-contacts,0.3);
+  }
+
+  &:focus{
+    outline: none;
+
+    border: 1px solid rgba($color-contacts, 0.8);
+
+    &::placeholder{
+      color:  rgba($color-contacts,0.5);
+    }
+  }
 }
 
 .form__textarea {
+  flex: 1 1 auto;
 
+  height: 120px;
+
+  padding: 12px;
+
+  background-color: transparent;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Rubik', sans-serif;
+
+  color: $color-contacts;
+
+  border: 1px solid rgba($color-contacts, 0.3);
+
+  resize: none;
+
+  &::placeholder{
+    color: rgba($color-contacts,0.3);
+  }
+
+  &:focus{
+    outline: none;
+
+    border: 1px solid rgba($color-contacts, 0.8);
+
+    &::placeholder{
+      color:  rgba($color-contacts,0.5);
+    }
+  }
 }
 
 .form__button {
-
+  padding: 12px 31px;
 }

@@ -7,10 +7,8 @@
     "list" : {
       "name": "Николай Кузнецов",
       "birthday" : "14 февраля 1991 г.",
-      "age" : "30 лет",
       "phone" : "+7 (919) 148 66 69",
-      "email" : "abraklion@gmail.com",
-      "skype" : "mavaji2"
+      "email" : "abraklion@gmail.com"
     }
   },
   "profession" : "Front-End",

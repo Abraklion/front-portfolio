@@ -101,7 +101,7 @@ $bg-figures: $primary-bg; // фон фигуры с 3 углами
 /* Карточка привью портфолио */
 $bg-card: $primary-bg; // фон картички
 $border-card: #969696; // рамка картички
-$shadow-card: $white; $opacity-shadow-card: 0.3;// тень картички и прозрачность
+$shadow-card: $white; $opacity-shadow-card: 0.2;// тень картички и прозрачность
 $bg-die-card: $white; // фон плашки "На заказ | Для души"
 $border-die-card: #969696; // рамка плашки "На заказ | Для души"
 $color-die-text: $black; $opacity-die-text: 0.9; // цвет текста плашки и прозрачность
@@ -112,3 +112,34 @@ $color-link-card-hover: $black; $opacity-link-card-hoverBG: 0.8;// цвет фо
 $bg-more: $primary-bg; // фон картички "Показать еще"
 $border-more: #969696; // рамка картички "Показать еще"
 $color-text-more: $white; // цвет текста
+
+// Мои навыки
+$bg-skills: $primary-bg; // фон "Мои навыки"
+$bg-line-skills: $primary; // цвет линии
+
+/* Картичка навыков */
+$bg-element: #13131c; // фон карточки и прозрачность фона
+$border-element: #868686; $opacity-border-element: 0.15; // рамка картички
+$color-text-element: $white; // цвет текста карточки основной
+$color-primary: $primary; // цвет вторичный
+
+// Контакты
+$bg-contacts: $black; // фон Контакты
+$color-contacts: $white; // цвет текста
+$color-icon-contacts: $secondary; // цвет иконок
+
+// Подвал
+$bg-footer: $primary-bg; // фон Подвал
+$bg-footer-shadow: $black; $opacity-footer-shadow: 0.25;// тень подвала и прозрачность тень и линии сверху
+$color-icon-footer: $white; // цвет иконок
+$color-icon-footer-hover: $primary; // цвет иконок при наведении
+
+// Модальное окно Карточка портфолио
+$bg-modal: $primary-bg; // фон Контакты
+$color-text-modal: $white; // цвет текста и линии
+$color-title-modal: $secondary; // цвет всех заголовков
+$bg-technology-modal: $white; $opacity-technology-modal: 0.08;// технологии фон и прозрачность
+
+
+
+

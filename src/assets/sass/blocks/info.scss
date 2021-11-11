@@ -18,7 +18,7 @@
     right: 0;
     z-index: -1;
 
-    background-image: url(../img/bg-info.png);
+    background-image: url(../img/bg-info-xs.png);
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,11 +27,11 @@
     filter: brightness(90%);
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../img/bg-info@2x.png);
+      background-image: url(../img/bg-info-xs@2x.png);
     }
 
     @media (min-resolution: 3dppx) {
-      background-image: url(../img/bg-info@3x.png);
+      background-image: url(../img/bg-info-xs@3x.png);
     }
   }
 }

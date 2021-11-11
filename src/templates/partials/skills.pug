@@ -10,20 +10,22 @@ section.skills#skills
         section.skills__box
           h3.skills__category= item.category
 
-          .skills__carousel
+          .skills__carousel.js-carousel
             each val in item.list
-              .skills__item
-                article.element
-                  header.element__header
-                    img(src=`assets/img/${val.icon}`, width="123", height="123", loading="lazy", alt=val.name).element__img
-                    h4.element__title= val.name
-                    p.element__description= val.description
-                  footer.element__footer
-                    .element__name= val.name
-                    ul.element__list
-                      li.element__item
-                        .element__text Использовал в проектах
-                        .element__quantity= val.quantity
-                      li.element__item
-                        .element__text Уровень владения
-                        .element__level= val.level
+              div
+                .skills__item
+                  article(data-order=val.id).element
+                    header.element__header
+                      img(src=`assets/img/${val.icon}`, width="123", height="123", loading="lazy", alt=val.name).element__img
+                      h4.element__title= val.name
+                      p.element__description= val.description
+                    footer.element__footer
+                      .element__name= val.name
+                      ul.element__list
+                        li.element__item
+                          .element__text Использовал в проектах
+                          .element__quantity= val.quantity
+                        li.element__item
+                          .element__text Уровень владения
+                          .element__chart(data-percent=val.level)
+                            span.element__percent= val.level
