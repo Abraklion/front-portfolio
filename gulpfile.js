@@ -14,7 +14,7 @@ global.$ = {
 
     toggle: {
       minHtml: false, // true / false
-      fullCss: true, // true / false
+      fullCss: false, // true / false
       fullJs: false, // true / false
       resizeImg: false, // true / false
       mediaEndFile: false, // true / false

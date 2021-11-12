@@ -15,9 +15,15 @@ block link
 
 block script
 
+  script(defer src="https://code.jquery.com/jquery-3.6.0.min.js", integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin="anonymous")
+  script(defer src="assets/js/app.min.js")
+
 block content
 
   .main
+
+    //- Шапка
+    include templates/partials/burger
 
     //- Шапка
     include templates/partials/header404
@@ -27,6 +33,6 @@ block content
         .gag__inner
 
           h1.gag__title Страница не найдена
-          .gag__number 4 #[sub 0] 4
-          p.gag__text Возможно, она была удалена или её адрес<br> был указан неверно.
-          a(href="index.html").gag__button.button.button--gag На главную
+          .gag__number 4#[sub 0]4
+          p.gag__text Возможно, она была удалена или адрес #[br] был указан неверно.
+          a(href="index.html").gag__button.button На главную

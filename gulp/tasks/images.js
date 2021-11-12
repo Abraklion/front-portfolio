@@ -12,7 +12,7 @@ module.exports = function () {
 
     // Конвертирует в формат webp
     $.gulp.src($.config.paths.images.webp + '**/*.{jpg,png,gif}')
-      .pipe($.gp.webp({quality: 80}))
+      .pipe($.gp.webp({quality: 90}))
       .pipe($.gulp.dest($.config.output.pathImg));
 
     // Просто переносит gif,ico,webp
@@ -23,7 +23,7 @@ module.exports = function () {
 
       // Минифицирует и переносит
       .pipe($.gp.if($.config.toggle.resizeImg,$.gp.imagemin([
-        $.gp.imagemin.mozjpeg({quality: 80, progressive: true}),
+        $.gp.imagemin.mozjpeg({quality: 90, progressive: true}),
         $.gp.imagemin.optipng({optimizationLevel: 5}),
         $.gp.imagemin.svgo({
           plugins: [

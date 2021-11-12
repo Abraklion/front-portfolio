@@ -135,11 +135,15 @@ $color-icon-footer: $white; // цвет иконок
 $color-icon-footer-hover: $primary; // цвет иконок при наведении
 
 // Модальное окно Карточка портфолио
-$bg-modal: $primary-bg; // фон Контакты
+$bg-modal: $primary-bg; // фон Карточка портфолио
+$bg-gradient-first: $black; $bg-gradient-last: $primary-bg; // градиент
 $color-text-modal: $white; // цвет текста и линии
 $color-title-modal: $secondary; // цвет всех заголовков
 $bg-technology-modal: $white; $opacity-technology-modal: 0.08;// технологии фон и прозрачность
 
-
-
+// Страница 404
+$bg-gag: $primary-bg; // фон Подвал
+$bg-gradient-first-gag: $black; $bg-gradient-last-gag: $primary-bg; // градиент
+$color-text-gag: $white; // цвет текста
+$color-number-gag: $primary; // цвет цифр
 

@@ -10,6 +10,7 @@
   z-index: 100;
 
   background-color: $bg-modal;
+  background-image: radial-gradient(circle farthest-corner at 100% 100%, $black, rgba($bg-gradient-last,0.13));
 
   color: $color-text-modal;
 
@@ -27,6 +28,7 @@
 
 .modal__inner {
   position: relative;
+  z-index: 101;
 
   padding: 70px 0 55px 0;
 }
