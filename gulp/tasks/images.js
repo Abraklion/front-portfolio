@@ -19,9 +19,8 @@ module.exports = function () {
     $.gulp.src($.config.paths.images.img + '*.{gif,ico,webp}')
       .pipe($.gulp.dest($.config.output.pathImg));
 
-    return $.gulp.src([$.config.paths.images.img + '*.{jpg,png,svg}', $.config.paths.images.webp + '*.{jpg,png}'])
-
-      // Минифицирует и переносит
+    // Минифицирует и переносит jpg,svg
+    $.gulp.src([$.config.paths.images.img + '*.{jpg,svg}', $.config.paths.images.webp + '*.jpg'])
       .pipe($.gp.if($.config.toggle.resizeImg,$.gp.imagemin([
         $.gp.imagemin.mozjpeg({quality: 90, progressive: true}),
         $.gp.imagemin.optipng({optimizationLevel: 5}),
@@ -33,5 +32,16 @@ module.exports = function () {
         })
       ])))
       .pipe($.gulp.dest($.config.output.pathImg));
+
+    // Минифицирует и переносит png формат
+    return $.gulp.src([$.config.paths.images.img + '*.png', $.config.paths.images.webp + '*.png'])
+      .pipe($.gp.if($.config.toggle.resizeImg,$.gp.tinypngCompress({
+        key: 'yPnptfy8hjVP6f0Y0vC7mbdwT4hPZfJs',
+        parallel: false, // асинхронная загрузка всех картинок (по умолчанию: true)
+        parallelMax: 2, // сколько за раз отправлять картинок на сервер (по умолчанию: 5)
+        summarize: true // сообщения в консоль после сжатия (по умолчанию: false)
+      })))
+      .pipe($.gulp.dest($.config.output.pathImg));
+
   });
 }

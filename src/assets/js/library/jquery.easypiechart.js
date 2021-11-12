@@ -1,15 +1,6 @@
 
 /* http://rendro.github.io/easy-pie-chart */
 
-/**!
- * easy-pie-chart
- * Lightweight plugin to render simple, animated and retina optimized pie charts
- *
- * @license
- * @author Robert Fleischmann <rendro87@gmail.com> (http://robert-fleischmann.de)
- * @version 2.1.7
- **/
-
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set
