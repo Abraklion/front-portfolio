@@ -23,7 +23,17 @@
 
     width: 240px;
 
+    @media (min-width: $viewport-md) {
+      width: 520px;
+    }
 
+    @media (min-width: $viewport-lg) {
+      width: 540px;
+    }
+
+    @media (min-width: $viewport-xl) {
+      width: 800px;
+    }
 
     &:focus {
         outline: none;
@@ -131,20 +141,56 @@
   transition: opacity 0.2s ease;
 
   &:focus{
-    outline: none;
+   outline-width: 0;
   }
 
   &:active{
     opacity: 0.8;
+  }
+
+  @media (min-width: $viewport-md) {
+    width: calc(((100% / 2) - 260px) + 12px);
+  }
+
+  @media (min-width: $viewport-lg) {
+    width: calc(((100% / 2) - 270px) + 12px);
+
+    &:hover{
+      opacity: 0.7;
+    }
+
+    &:focus{
+      outline-width: initial;
+    }
+
+    &:active{
+      opacity: 0.15;
+    }
+  }
+
+  @media (min-width: $viewport-xl) {
+    width: calc(((100% / 2) - 400px) + 12px);
   }
 }
 
 .slick-prev{
   left: -12px;
   background-image: url(../img/arrow-left.svg);
+
+  @media (min-width: $viewport-sm) {
+    background-size: 50px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    background-size: 60px;
+  }
 }
 
 .slick-next{
   right: -12px;
   background-image: url(../img/arrow-right.svg);
+
+  @media (min-width: $viewport-sm) {
+    background-size: 65px;
+  }
 }

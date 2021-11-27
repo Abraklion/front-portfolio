@@ -68,4 +68,8 @@
       transform: rotate(-45deg);
     }
   }
+
+  @media (min-width: $viewport-md) {
+    display: none;
+  }
 }

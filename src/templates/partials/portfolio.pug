@@ -19,13 +19,9 @@ section.portfolio#portfolio
                     source(media="(max-width: 1199px)", srcset=`assets/img/${item.img}-all.webp, assets/img/${item.img}-all@2x.webp 2x, assets/img/${item.img}-all@3x.webp 3x`, type="image/webp")
                     img(src=`assets/img/${item.img}-all.png`, srcset=`assets/img/${item.img}-all@2x.png 2x, assets/img/${item.img}-all@3x.png 3x`, loading="lazy", alt="").card__img
                   .card__category= item.category
-                ul.card__info
-                  li.card__item= item.name
-                  li.card__item= item.view
-                  li.card__item= item.category
               footer.card__footer
                 a(href=item.link target="_blank").card__link На сайт
-                a(href="").card__link.js-card__link Подробнее
+                a(href="#").card__link.js-card__link Подробнее
         li.portfolio__item
           .more
             .more__title= jsonPortfolio.still.title

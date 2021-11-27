@@ -3,7 +3,6 @@
 
 const burger = document.querySelector(".js-burger");
 
-
 /* ============ События =============*/
 
 // Мыши

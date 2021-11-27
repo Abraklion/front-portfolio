@@ -3,37 +3,27 @@
 
   "preview" : [
     {
-      "name" : "Автолидер",
-      "view" : "Landing page",
-      "category" : "На заказ",
+      "category": "На заказ",
       "link" : "https://avtolider.bashkiria.ru",
       "img" : "avtolider-preview"
     },
     {
-      "name" : "Автолидер",
-      "view" : "Landing page",
-      "category" : "для души",
+      "category": "Для души",
       "link" : "https://avtolider.bashkiria.ru",
       "img" : "avtolider-preview"
     },
     {
-      "name" : "Автолидер",
-      "view" : "Landing page",
-      "category" : "На заказ",
+      "category": "Для души",
       "link" : "https://avtolider.bashkiria.ru",
       "img" : "avtolider-preview"
     },
     {
-      "name" : "Автолидер",
-      "view" : "Landing page",
-      "category" : "для души",
+      "category": "На заказ",
       "link" : "https://avtolider.bashkiria.ru",
       "img" : "avtolider-preview"
     },
     {
-      "name" : "Автолидер",
-      "view" : "Landing page",
-      "category" : "На заказ",
+      "category": "Для души",
       "link" : "https://avtolider.bashkiria.ru",
       "img" : "avtolider-preview"
     }

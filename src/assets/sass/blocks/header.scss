@@ -25,6 +25,13 @@
     visibility: visible;
     transform: translateX(0);
   }
+
+  @media (min-width: $viewport-md) {
+    z-index: 101;
+    visibility: visible;
+
+    transform: translateX(0);
+  }
 }
 
 .header__navigation {
@@ -35,6 +42,10 @@
   justify-content: flex-end;
 
   border-right: 1px solid rgba($border-header,$border-opacity-header);
+
+  @media (min-width: $viewport-md) {
+    justify-content: flex-start;
+  }
 }
 
 .header__logo {
@@ -49,4 +60,8 @@
 
 .header__menu {
   margin: 0 0 35px 0;
+
+  @media (min-width: $viewport-md) {
+    margin-top: 52px;
+  }
 }

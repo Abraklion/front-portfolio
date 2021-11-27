@@ -101,7 +101,7 @@ $bg-figures: $primary-bg; // фон фигуры с 3 углами
 /* Карточка привью портфолио */
 $bg-card: $primary-bg; // фон картички
 $border-card: #969696; // рамка картички
-$shadow-card: $white; $opacity-shadow-card: 0.2;// тень картички и прозрачность
+$shadow-card: $black; $opacity-shadow-card: 0.2;// тень картички и прозрачность
 $bg-die-card: $white; // фон плашки "На заказ | Для души"
 $border-die-card: #969696; // рамка плашки "На заказ | Для души"
 $color-die-text: $black; $opacity-die-text: 0.9; // цвет текста плашки и прозрачность
@@ -145,5 +145,5 @@ $bg-technology-modal: $white; $opacity-technology-modal: 0.08;// техноло�
 $bg-gag: $primary-bg; // фон Подвал
 $bg-gradient-first-gag: $black; $bg-gradient-last-gag: $primary-bg; // градиент
 $color-text-gag: $white; // цвет текста
-$color-number-gag: $primary; // цвет цифр
+$color-number-gag: $primary; // цвет цифр и рамки
 

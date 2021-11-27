@@ -7,9 +7,9 @@
 
 $(function() {
   //= components/burger-menu.js
+  //= components/slick.js
   //= components/diagram.js
   //= components/card-skills.js
-  //= components/slick.js
   //= components/modal.js
 });
 

@@ -3,6 +3,14 @@
   display: grid;
   grid-template-rows: repeat(4,auto);
   row-gap: 18px;
+
+  @media (min-width: $viewport-md) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    row-gap: 23px;
+  }
 }
 
 .form__element {
@@ -41,6 +49,10 @@
       color:  rgba($color-contacts,0.5);
     }
   }
+
+  @media (min-width: $viewport-xl) {
+    padding: 14px;
+  }
 }
 
 .form__textarea {
@@ -76,6 +88,14 @@
     &::placeholder{
       color:  rgba($color-contacts,0.5);
     }
+  }
+
+  @media (min-width: $viewport-md) {
+    height: 140px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 14px;
   }
 }
 

@@ -33,6 +33,47 @@
     @media (min-resolution: 3dppx) {
       background-image: url(../img/bg-info-xs@3x.png);
     }
+
+    @media (min-width: $viewport-sm) {
+      width: 81.59vw;
+    }
+
+    @media (min-width: $viewport-md) {
+      width: 71.59vw;
+
+      background-image: url(../img/bg-info-md.png);
+
+      opacity: 0.55;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/bg-info-md@2x.png);
+      }
+
+      @media (min-resolution: 3dppx) {
+        background-image: url(../img/bg-info-md@3x.png);
+      }
+    }
+
+    @media (min-width: $viewport-lg) {
+      width: 65vw;
+
+      background-image: url(../img/bg-info-lg.png);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/bg-info-lg@2x.png);
+      }
+
+      @media (min-resolution: 3dppx) {
+        background-image: url(../img/bg-info-lg@3x.png);
+      }
+    }
+
+    @media (min-width: $viewport-xl) {
+      width: 50vw;
+
+      opacity: 0.9;
+      filter: brightness(100%);
+    }
   }
 }
 
@@ -42,6 +83,10 @@
   justify-content: center;
 
   min-height: 640px;
+
+  @media (min-width: $viewport-md) {
+    height: 100vh;
+  }
 }
 
 .info__greetings{
@@ -49,6 +94,21 @@
 
   font-size: 18px;
   line-height: 22px;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 25px;
+
+    font-size: 22px;
+  }
 }
 
 .info__name{
@@ -57,6 +117,34 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 13px;
+
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 15px;
+
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 20px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 25px;
+
+    font-size: 65px;
+    line-height: 65px;
+  }
 }
 
 .info__profession{
@@ -66,6 +154,29 @@
   line-height: 22px;
 
   color: $color-profession;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $viewport-md) {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 25px;
+  }
 }
 
 .info__slogan{
@@ -74,6 +185,20 @@
   font-weight: 300;
 
   opacity: 0.8;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $viewport-md) {
+    max-width: 400px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    max-width: 450px;
+
+    font-size: 16px;
+  }
 }
 
 .info__button{

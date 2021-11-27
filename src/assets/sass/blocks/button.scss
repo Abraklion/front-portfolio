@@ -60,5 +60,12 @@
     border: 1px solid rgba($bg-button,0.8);
 
     color: rgba($text-button,0.8);
+
+    @media (min-width: $viewport-lg) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+
+      border-radius: 0;
+    }
   }
 }

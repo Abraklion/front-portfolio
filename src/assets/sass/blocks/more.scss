@@ -7,6 +7,19 @@
   border: 2px solid rgba($border-more,0.7);
 
   color: $color-text-more;
+
+  @media (min-width: $viewport-sm) {
+    padding: 46px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+
+    height: 100%;
+  }
 }
 
 .more__title {
@@ -19,6 +32,16 @@
   text-align: center;
 
   opacity: 0.8;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    font-size: 17px;
+    line-height: 20px;
+  }
 }
 
 .more__text {
@@ -30,6 +53,11 @@
   text-align: center;
 
   opacity: 0.5;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .more__button {
@@ -38,4 +66,8 @@
   width: 163px;
 
   margin: 0 auto;
+
+  @media (min-width: $viewport-lg) {
+    width: 213px;
+  }
 }

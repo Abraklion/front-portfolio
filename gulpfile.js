@@ -16,7 +16,7 @@ global.$ = {
       minHtml: false, // true / false
       fullCss: false, // true / false
       fullJs: false, // true / false
-      resizeImg: true, // true / false
+      resizeImg: false, // true / false
       mediaEndFile: false, // true / false
     },
 

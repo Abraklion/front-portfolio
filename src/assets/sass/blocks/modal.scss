@@ -14,15 +14,51 @@
 
   color: $color-text-modal;
 
-  transform: translateX(-100%) ;
+  transform: translateX(-100%);
 
   visibility: hidden;
 
   transition: transform 0.4s linear, visibility 0.4s linear;
 
+
+  @media (min-width: $viewport-md) {
+    width: calc(100% - 79px);
+  }
+
+  @media (min-width: $viewport-lg) {
+
+    // Кнопки боковые
+    &::-webkit-scrollbar-button {
+      width: 5px;
+      height: 0;
+    }
+
+    // Цвет дорожки, по которой двигается бегунок прокрутки.
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0,0,0,0);
+      border-radius: 5px;
+    }
+
+    // Цвет бегунка полосы, а так же его закругление.
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    // Основная ширина полосы прокрутки.
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+  }
+
   &--active{
     transform: translateX(0);
     visibility: visible;
+
+    @media (min-width: $viewport-md) {
+      transform: translateX(79px);
+    }
   }
 }
 
@@ -31,6 +67,20 @@
   z-index: 101;
 
   padding: 70px 0 55px 0;
+
+  @media (min-width: $viewport-sm) {
+    padding: 83px 0 68px 0;
+
+    position: static;
+  }
+
+  @media (min-width: $viewport-md) {
+    padding: 90px 0 75px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding: 83px 0 68px 0;
+  }
 }
 
 .modal__title {
@@ -43,19 +93,55 @@
   text-align: center;
 
   color: $color-title-modal;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 30px;
+
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 34px;
+    line-height: 34px;
+  }
 }
 
 .modal__box {
 
+  @media (min-width: $viewport-lg) {
+    display: grid;
+    grid-template-columns: 58% 40%;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    grid-template-columns: 48% 47%;
+  }
 }
 
 .modal__img {
   margin: 0 0 25px 0;
 
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 0;
+  }
+
   img {
     display: block;
 
     margin: 0 auto;
+
+    @media (min-width: $viewport-lg) {
+      margin: 0;
+    }
   }
 }
 
@@ -63,6 +149,16 @@
   @include list();
 
   margin: 0 0 35px 0;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 0;
+    //padding-top: 40px;
+    align-self: center;
+  }
 }
 
 .modal__item {
@@ -79,6 +175,28 @@
 
   &:first-child{
     border-top: 1px solid rgba($color-text-modal,0.1);
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $viewport-md) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 46px;
+
+    margin-bottom: 15px;
+
+    border-top: 1px solid rgba($color-text-modal,0.1);
+
+    background-position: 7px center;
   }
 
   &--company {
@@ -117,6 +235,12 @@
   &:not(:last-child){
     margin: 0 0 30px 0;
   }
+
+  @media (min-width: $viewport-sm) {
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .modal__info-subtitle {
@@ -128,12 +252,36 @@
   color: $color-title-modal;
 
   text-transform: uppercase;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $viewport-md) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 23px;
+  }
 }
 
 .modal__info-text {
+  margin: 0;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $viewport-sm) {
+    line-height: 26px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    font-size: 17px;
+  }
 }
 
 .modal__technology{
@@ -154,6 +302,12 @@
   line-height: 18px;
 
   border-radius: 3px;
+
+  @media (min-width: $viewport-sm) {
+    margin-right: 20px;
+
+    font-size: 15px;
+  }
 }
 
 .button__modal{
@@ -239,5 +393,29 @@
     transform: rotate(-45deg);
 
     transition: background-color 0.2s ease;
+  }
+
+  @media (min-width: $viewport-sm) {
+    width: 43px;
+    height: 43px;
+
+    top: 20px;
+    right: 20px;
+
+    &::before{
+      content: "";
+
+      margin: -1px 0 0 -12px;
+
+      width: 24px;
+    }
+
+    &::after{
+      content: "";
+
+      margin: -1px 0 0 -12px;
+
+      width: 24px;
+    }
   }
 }
