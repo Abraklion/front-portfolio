@@ -12,6 +12,9 @@
 
   cursor: pointer;
 
+  transform: scale(1) rotateY(0);
+  transition: transform 0s linear 1.5s;
+
   animation-duration: 1.5s;
   animation-delay: 0s;
   animation-timing-function: ease;

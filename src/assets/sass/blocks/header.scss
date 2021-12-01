@@ -32,6 +32,10 @@
 
     transform: translateX(0);
   }
+
+  @media (min-width: $viewport-lg) {
+    overflow-y: visible;
+  }
 }
 
 .header__navigation {

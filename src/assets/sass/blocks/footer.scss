@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $viewport-xl) {
-    padding: 35px 0;
+    padding: 45px 0;
   }
 }
 
@@ -55,6 +55,8 @@
   }
 
   @media (min-width: $viewport-lg) {
+    grid-template-columns: repeat(auto-fit, 20px);
+
     column-gap: 20px;
   }
 }

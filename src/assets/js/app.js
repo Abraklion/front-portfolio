@@ -11,6 +11,8 @@ $(function() {
   //= components/diagram.js
   //= components/card-skills.js
   //= components/modal.js
+  //= components/scrollTop.js
+  //= components/menu.js
 });
 
 
