@@ -36,6 +36,8 @@
 
   transition: border 0.3s ease, color 0.3s ease;
 
+  user-select: $blockText;
+
   &::placeholder{
     color: rgba($color-contacts,0.3);
   }
@@ -75,6 +77,8 @@
   border: 1px solid rgba($color-contacts, 0.3);
 
   resize: none;
+
+  user-select: $blockText;
 
   &::placeholder{
     color: rgba($color-contacts,0.3);

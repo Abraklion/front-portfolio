@@ -8,24 +8,31 @@ section.skills#skills
 
       each item in jsonSkills.skills
         section.skills__box
-          h3.skills__category= item.category
 
-          .skills__carousel.js-carousel
-            each val in item.list
-              div
-                .skills__item
-                  article(data-order=val.id).element
-                    header.element__header
-                      img(src=`assets/img/${val.icon}`, width="123", height="123", loading="lazy", alt=val.name).element__img
-                      h4.element__title= val.name
-                      p.element__description= val.description
-                    footer.element__footer
-                      .element__name= val.name
-                      ul.element__list
-                        li.element__item
-                          .element__text Использовал в проектах
-                          .element__quantity= val.quantity
-                        li.element__item
-                          .element__text Уровень владения
-                          .element__chart(data-percent=val.level)
-                            span.element__percent= val.level
+          .skills__category-wrapper
+            h3.skills__category= item.category
+            .skills__slider-bar.slider-bar(tabindex="0", title="Выключить слайдер")
+              .slider-bar__toggle
+
+          .skills__carousel-wrapper
+            .skills__carousel.js-carousel
+              each val in item.list
+                div.skills__inner-item
+                  .skills__item
+                    article(data-order=val.id).element
+                      header.element__header
+                        img(src=`assets/img/${val.icon}`, width="123", height="123", loading="lazy", alt=val.name).element__img
+                        h4.element__title= val.name
+                        p.element__description= val.description
+                      footer.element__footer
+                        .element__name= val.name
+                        ul.element__list
+                          li.element__item
+                            .element__text Использовал в проектах
+                            .element__quantity(data-quantity=val.quantity)= val.quantity
+                          li.element__item
+                            .element__text Уровень владения
+                            .element__chart(data-percent=val.level)
+                              span.element__percent= val.level
+
+// /.skills

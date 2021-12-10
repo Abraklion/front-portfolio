@@ -94,6 +94,8 @@
 
   color: $color-title-modal;
 
+  user-select: $blockText;
+
   @media (min-width: $viewport-sm) {
     margin-bottom: 30px;
 
@@ -113,6 +115,7 @@
 }
 
 .modal__box {
+  user-select: $blockText;
 
   @media (min-width: $viewport-lg) {
     display: grid;
@@ -156,7 +159,6 @@
 
   @media (min-width: $viewport-lg) {
     margin-bottom: 0;
-    //padding-top: 40px;
     align-self: center;
   }
 }
@@ -169,7 +171,7 @@
   background-size: 24px 24px;
 
   font-size: 18px;
-  line-height: 18px;
+  line-height: 22px;
 
   border-bottom: 1px solid rgba($color-text-modal,0.1);
 
@@ -199,6 +201,14 @@
     background-position: 7px center;
   }
 
+  @media (min-width: $viewport-xl) {
+    background-position: 10px center;
+
+    padding-left: 55px;
+
+    background-size: 26px 26px;
+  }
+
   &--company {
     background-image: url(../img/company-modal.svg);
   }
@@ -210,6 +220,10 @@
   &--github {
     background-image: url(../img/github-modal.svg);
   }
+
+  &--type {
+    background-image: url(../img/type-modal.svg);
+  }
 }
 
 .modal__link {
@@ -217,12 +231,16 @@
 
   text-decoration: none;
 
+  opacity: 1;
+
+  transition: opacity 0.2s ease;
+
   &:hover{
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   &:active{
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 
@@ -253,6 +271,8 @@
 
   text-transform: uppercase;
 
+  user-select: $blockText;
+
   @media (min-width: $viewport-sm) {
     font-size: 22px;
     line-height: 22px;
@@ -275,6 +295,12 @@
   font-size: 16px;
   line-height: 20px;
 
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
   @media (min-width: $viewport-sm) {
     line-height: 26px;
   }
@@ -290,6 +316,8 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+  user-select: $blockText;
 }
 
 .modal__technology-item {

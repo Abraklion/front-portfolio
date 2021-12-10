@@ -6,9 +6,17 @@ section.portfolio#portfolio
       h2.portfolio__title.title
         span= jsonPortfolio.title
 
+      ul.portfolio__tab
+        each item in jsonPortfolio.tab
+          li.portfolio__tab-item
+            if item.active
+              a(href="", data-tab= item.name, tabindex="-1", class=`portfolio__tab-link ${item.active}`)= item.name
+            else
+              a(href="", data-tab= item.name).portfolio__tab-link= item.name
+
       ul.portfolio__list
         each item in jsonPortfolio.preview
-          li.portfolio__item
+          li(data-tabs= item.category).portfolio__item.portfolio__item--hide
             article.card
               header.card__header
                 h2.visually-hidden= item.name
@@ -22,10 +30,10 @@ section.portfolio#portfolio
               footer.card__footer
                 a(href=item.link target="_blank").card__link На сайт
                 a(href="").card__link.js-card__link Подробнее
-        li.portfolio__item
+        li.portfolio__item.portfolio__item--hide
           .more
             .more__title= jsonPortfolio.still.title
             .more__text= jsonPortfolio.still.subtitle
-            button(type="button").more__button.button.button--more= jsonPortfolio.still.btn
+            button(type="button").more__button.button.button--more.js-more__button= jsonPortfolio.still.btn
 
-
+// /.portfolio

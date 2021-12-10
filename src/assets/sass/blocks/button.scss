@@ -31,19 +31,26 @@
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
   &:hover{
-    background-color: $bg-button-hover;
+    outline-width: 0;
 
-    color: $text-button-hover;
+    @media (min-width: $viewport-lg) {
+      outline-width: initial;
 
-    transform: translateY(-2px);
+      background-color: $bg-button-hover;
+
+      color: $text-button-hover;
+
+      transform: translateY(-2px);
+
+    }
   }
 
   &:focus{
-    background-color: $bg-button-hover;
+    outline-width: 0;
 
-    color: $text-button-hover;
-
-    transform: translateY(-2px);
+    @media (min-width: $viewport-lg) {
+      outline-width: initial;
+    }
   }
 
   &--more{

@@ -9,24 +9,34 @@ $(".js-carousel").slick({
   draggable: false,
   swipe: false,
   mobileFirst: true,
+  infinite: false,
+  prevArrow: "<button type='button' class='slick-prev'><span class='visually-hidden'>Предыдущий слайдер</span></button>",
+  nextArrow: "<button type='button' class='slick-next'><span class='visually-hidden'>Следующий слайдер</span></button>",
   responsive: [
     {
       breakpoint: 767,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       }
     },
     {
       breakpoint: 1199,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 400,
+        slidesToScroll: 3,
+        speed: 500,
       }
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
+    {
+      breakpoint: 1499,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        speed: 500,
+      }
+    },
   ]
 });
+
+

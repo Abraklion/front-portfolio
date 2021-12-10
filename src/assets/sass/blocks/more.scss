@@ -8,6 +8,8 @@
 
   color: $color-text-more;
 
+  user-select: $blockText;
+
   @media (min-width: $viewport-sm) {
     padding: 46px 0;
   }

@@ -12,3 +12,6 @@ $('.element__chart').easyPieChart({
 });
 
 
+
+
+

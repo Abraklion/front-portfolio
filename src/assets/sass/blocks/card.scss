@@ -3,6 +3,8 @@
   background-color: $bg-card;
 
   border: 2px solid rgba($border-card,0.7);
+
+  user-select: $blockText;
 }
 
 .card__header {

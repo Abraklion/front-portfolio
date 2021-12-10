@@ -21,6 +21,8 @@
 
   transition: all 0.4s ease;
 
+  user-select: $blockText;
+
   &--active{
     visibility: visible;
     transform: translateX(0);

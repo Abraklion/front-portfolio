@@ -17,10 +17,7 @@ module.exports = function () {
             jsonFooter: JSON.parse($.fs.readFileSync('./src/templates/data/dataFooter.json', 'utf8')),
         }
       }))
-      .pipe($.gp.htmlBeautify({
-        "indent_size": 2,
-        "max_preserve_newlines": 1
-      }))
+      .pipe($.gp.formatHtml())
       .pipe($.gp.if($.config.toggle.minHtml, $.gp.htmlmin({ collapseWhitespace: true })))
       .pipe($.gulp.dest($.config.output.path))
       .pipe($.browserSync.stream());

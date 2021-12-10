@@ -6,13 +6,14 @@
 //= library/jquery.easypiechart.js
 
 $(function() {
-  //= components/burger-menu.js
   //= components/slick.js
   //= components/diagram.js
-  //= components/card-skills.js
+  //= components/burger-menu.js
+  //= components/menu.js
+  //= components/portfolio.js
+  //= components/skills.js
   //= components/modal.js
   //= components/scrollTop.js
-  //= components/menu.js
 });
 
 

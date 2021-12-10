@@ -1,8 +1,15 @@
+/* ================================================================================ */
+/* =========================== ПРОКРУТИТЬ ВВЕРХ =================================== */
+/* ================================================================================ */
+
+
+if(document.querySelector(".js-up") !== null){
+
 /* ============ Переменные =============*/
 
 const scrollToHandler = document.querySelector(".js-up");
 const scrollToHandlerBtn = scrollToHandler.querySelector(".up__button");
-const scrollConsultation = document.querySelector("#biography");
+const scrollBiography = document.querySelector("#biography");
 
 /* ============ Переменные =============*/
 
@@ -11,7 +18,7 @@ const scrollConsultation = document.querySelector("#biography");
 
 window.addEventListener("scroll", function (){
 
-  const box = scrollConsultation.getBoundingClientRect().top + pageYOffset;
+  const box = scrollBiography.getBoundingClientRect().top + pageYOffset;
 
   if(pageYOffset >= box){
 
@@ -41,3 +48,5 @@ scrollToHandlerBtn.addEventListener("click",function (){
 });
 
 /* ============ События =============*/
+
+}

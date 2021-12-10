@@ -96,6 +96,8 @@
 
   margin: 0 auto 30px auto;
 
+  user-select: $blockText;
+
   @media (min-width: $viewport-sm) {
     margin-bottom: 40px;
   }
@@ -245,10 +247,22 @@
 
   color: rgba($color-text-biography,$opacity-text-biography);
 
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
   span {
     font-weight: 400;
 
     color: $color-fact;
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,5%);
+    }
   }
 
   @media (min-width: $viewport-md) {
@@ -303,6 +317,12 @@
 
   color: rgba($color-text-biography,$opacity-text-biography);
 
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
   &:nth-child(4){
     margin-bottom: 0;
   }
@@ -313,12 +333,24 @@
     font-weight: 500;
 
     color: rgba($color-text-biography,1);
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,5%);
+    }
   }
 
   a {
     color: rgba($color-text-biography,$opacity-text-biography);
 
     text-decoration: none;
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,15%);
+    }
 
     &:hover{
       text-decoration: underline;

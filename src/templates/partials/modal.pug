@@ -13,12 +13,14 @@ section.modal
             source(media="(max-width: 767px), (min-width: 992px)", srcset=`assets/img/avtolider-all.webp, assets/img/avtolider-all@2x.webp 2x, assets/img/avtolider-all@3x.webp 3x`, type="image/webp")
             img(src=`assets/img/avtolider-all.png`, srcset=`assets/img/avtolider-all@2x.png 2x, assets/img/avtolider-all@3x.png 3x`, loading="lazy", alt="")
         ul.modal__list
-          li.modal__item.modal__item--company
+          li(title="Заказчик").modal__item.modal__item--company
             | ИП “АвтоЛидер”
+          li(title="Тип сайта").modal__item.modal__item--type
+            | Корпоративный сайт
           li.modal__item.modal__item--internet
             a(href="https://avtolider.bashkiria.ru", target="_blank").modal__link Ссылка на проект
-          li.modal__item.modal__item--github
-            a(href="https://github.com/Abraklion", target="_blank").modal__link Репозиторий
+          //  li.modal__item.modal__item--github
+          //  a(href="https://github.com/Abraklion", target="_blank").modal__link Ссылка на репозиторий
 
       ul.modal__info
         li.modal__info-list
@@ -37,3 +39,5 @@ section.modal
             li.modal__technology-item JavaScript
 
       button(type="button" aria-label="Закрыть карточку").button__modal
+
+// /.modal

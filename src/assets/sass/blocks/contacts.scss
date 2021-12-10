@@ -72,6 +72,8 @@
 
   opacity: 0.9;
 
+  user-select: $blockText;
+
   @media (min-width: $viewport-sm) {
     margin-bottom: 20px;
   }
@@ -97,6 +99,8 @@
   line-height: 19px;
 
   opacity: 0.7;
+
+  user-select: $blockText;
 
   @media (min-width: $viewport-sm) {
     margin-bottom: 20px;
