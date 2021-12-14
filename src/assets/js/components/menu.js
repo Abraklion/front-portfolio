@@ -7,79 +7,88 @@
 
 /* красим нужный пункт меню при попадении на соответствующий ему блок при скроле */
 
-$(window).on("scroll load",function (){
+let objParamsBox = getCoords(["#info", "#biography", "#portfolio", "#skills", "#contacts"],"#contacts",250);
+scrollBox(objParamsBox);
 
-  // отбираем блокм у который есть пункт меню
-  const block = $("#info, #biography, #portfolio, #skills, #contacts");
+$(window).on("scroll ",function (){
 
-  // проходимся в цикле по блокам
-  block.each(function (index,element) {
+  scrollBox(objParamsBox);
 
-    // если блок с id == portfolio
-    if($(this).attr("id") === "portfolio"){
-
-      // вызываем функцию
-      pageScroll(this,0,1);
-
-    }
-    // если блок с id == skills
-    else if($(this).attr("id") === "skills"){
-
-      // вызываем функцию
-      pageScroll(this,0,250);
-
-    }
-    // если блок с id == contacts
-    else if($(this).attr("id") === "contacts"){
-
-      // вызываем функцию
-      pageScroll(this,250,0);
-
-    }
-    // для всех остальных блоков
-    else{
-
-      // вызываем функцию
-      pageScroll(this,0,0);
-
-    }
-
-  });
 });
 
-/*
-*   примимает 3 параметра:
-*
-*   1. elem - блок
-*   2. top - за какое расстояния до блока сверху красить пункт меню
-*   2. bottom - сколько нужно заступить в блок снизу пробы покрасить пункт меню
-*
-* */
+function getCoords(array, lastBox = null, upwardDisplacement = 0) {
 
-function pageScroll(elem,top = 0,bottom = 0) {
+  const obj = {};
 
-  // находим id элемента как строку сохраняем в link
-  const link = $(elem).attr("id");
+  for (let x = 0; x < array.length; x++){
 
-  // Если скролл больше или равен верхний границы элемента (- top) и если скролл меньше нижний границы елемента (- bottom)
-  if(pageYOffset >= ($(elem).offset().top - top) && pageYOffset <= ($(elem).offset().top + $(elem).outerHeight(true) - bottom)){
+    let element = array[x].slice(1);
 
-    // красим пункт меню соответствующий этому блоку
-    $('.menu__link[href="#'+ link +'"]').addClass("menu__link--active");
+    obj[element] = {
+
+      element : array[x],
+      top: Math.floor($(array[x]).offset().top),
+      bottom: 0,
+      height: Math.floor($(array[x]).outerHeight())
+
+    }
+
+    if(x !== 0){
+      obj[array[x - 1].slice(1)].bottom = Math.floor($(array[x]).offset().top - 1);
+    }
+
+    if(lastBox !== null){
+
+      if(array[x] === lastBox){
+        obj[element].top-= upwardDisplacement;
+        obj[element].bottom = Math.floor($(array[x]).offset().top + $(array[x]).outerHeight() - 1);
+
+        obj[array[x - 1].slice(1)].bottom-= upwardDisplacement;
+      }
+
+    }else{
+
+      if(x === array.length - 1){
+        obj[array[x].slice(1)].bottom = Math.floor($(array[x]).offset().top + $(array[x]).outerHeight() - 1);
+      }
+
+    }
 
   }
-  // иначе
-  else{
 
-    const linkItem = $('.menu__link[href="#'+ link +'"]');
+  return obj;
 
-    // удаляем цвет
-    linkItem.removeClass("menu__link--active");
+}
 
-    // удаляем фокус
-    linkItem.blur();
+function scrollBox(obj){
+
+  for (let val in obj) {
+
+    if(obj[val].height !== Math.floor($(obj[val].element).outerHeight())){
+
+      objParamsBox = getCoords(["#info", "#biography", "#portfolio", "#skills", "#contacts"],"#contacts",250);
+
+    }
+
+    if($(window).scrollTop() >= obj[val].top && $(window).scrollTop() <= obj[val].bottom){
+
+      $('.menu__link[href="'+ obj[val].element +'"]').addClass("menu__link--active");
+
+    }else{
+
+      let link = $('.menu__link[href="'+ obj[val].element +'"]');
+
+      if($(link).hasClass("menu__link--active")){
+
+        link.removeClass("menu__link--active");
+
+        link.blur();
+
+      }
+
+    }
+
   }
-
 }
 
 /* ============================== ПРИ КЛИКЕ =================================== */
@@ -95,16 +104,21 @@ $('a[href^="#"]').on("click",function (e){
   const nameBox = $(this).attr("href");
 
   //находим координаты блока относительно верха страницы
-  const coordinatesBox = $(nameBox).offset().top;
-
+  const coordinatesBox = Math.round($(nameBox).offset().top);
 
   // скролим к этому блоку
-  $("html, body").animate({
-    scrollTop: coordinatesBox
-  },{
-    duration: 300,   // по умолчанию «400»
-    easing: "linear" // по умолчанию «swing»
-  })
+  window.scrollTo({
+    top: coordinatesBox,
+    behavior: "smooth"
+  });
+
+  /*  скролим к этому блоку если на Jquery
+    // $("html, body").animate({
+    //   scrollTop: coordinatesBox
+    // },{
+    //   duration: 300,   // по умолчанию «400»
+    //   easing: "linear" // по умолчанию «swing»
+    // })*/
 
   // улаляем всплывающию подсказку
   $(".menu__hint").remove();

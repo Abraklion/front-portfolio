@@ -15,7 +15,7 @@ $(".js-card__link").on("click",function (e){
 
   $(".modal").addClass("modal--active");
 
-  $("a:not(.menu__link,.header__logo,.modal__link), button:not(.button__modal), input, textarea, .skills__slider-bar").attr("tabindex","-1");
+  $("a:not(.menu__link,.header__logo,.modal__link,.modal__team-link), button:not(.button__modal), input, textarea, .skills__slider-bar:not(.slider-bar--off)").attr("tabindex","-1");
 
   focusTrigger = this;
 });
@@ -28,7 +28,7 @@ $(".button__modal").on("click",function (e){
   $("body").removeClass("body-overflow");
   $(".modal").removeClass("modal--active");
 
-  $("a:not(.menu__link,.header__logo,.modal__link), button:not(.button__modal), input, textarea, .skills__slider-bar").removeAttr("tabindex");
+  $("a:not(.menu__link,.header__logo,.modal__link,.modal__team-link), button:not(.button__modal), input, textarea, .skills__slider-bar:not(.slider-bar--off)").attr("tabindex","0");
 
   focusTrigger.focus();
 });
