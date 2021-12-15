@@ -1,3 +1,7 @@
+/* Скролльте в низ что бы увидеть настройки вызова слайдера */
+
+/*  Слайдер  |  https://kenwheeler.github.io/slick/  */
+//= ../../../../node_modules/slick-carousel/slick/slick.js
 
 /* вызываем слайдер */
 

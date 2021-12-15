@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ошибка 404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="author" content="Abraklion">
+  <meta name="description" content="Страница не найдена. Ошибка 404">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="main">
+    <button class="burger js-burger" type="button">
+      <span class="visually-hidden">Показать меню</span>
+    </button>
+    <header class="header">
+      <a class="header__logo logo" href="index.html" aria-label="Логотип Кузнецов Николай"></a>
+      <nav class="header__navigation">
+        <ul class="header__menu menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html" aria-label="Главная">
+              <svg class="menu__svg" aria-hidden="true" width="27" height="27">
+                <use xlink:href="assets/img/sprite.svg#info"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--disabled">
+              <svg class="menu__svg" aria-hidden="true" width="27" height="27">
+                <use xlink:href="assets/img/sprite.svg#biography"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--disabled">
+              <svg class="menu__svg" aria-hidden="true" width="27" height="27">
+                <use xlink:href="assets/img/sprite.svg#portfolio"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--disabled">
+              <svg class="menu__svg" aria-hidden="true" width="27" height="27">
+                <use xlink:href="assets/img/sprite.svg#skills"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--disabled">
+              <svg class="menu__svg" aria-hidden="true" width="27" height="27">
+                <use xlink:href="assets/img/sprite.svg#contacts"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="gag">
+      <div class="container">
+        <div class="gag__inner">
+          <h1 class="gag__title">Страница не найдена</h1>
+          <div class="gag__number">4<sub>0</sub>4</div>
+          <p class="gag__text">Возможно, она была удалена или адрес
+            <br> был указан неверно.
+          </p>
+          <a class="gag__button button" href="index.html">На главную</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="assets/js/app.min.js"></script>
+</body>
+
+</html>

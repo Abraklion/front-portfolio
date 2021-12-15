@@ -36,7 +36,7 @@ module.exports = function () {
     // Минифицирует и переносит png формат
     return $.gulp.src([$.config.paths.images.img + '*.png', $.config.paths.images.webp + '*.png'])
       .pipe($.gp.if($.config.toggle.resizeImg,$.gp.tinypngCompress({
-        key: 'yPnptfy8hjVP6f0Y0vC7mbdwT4hPZfJs',
+        key: 'lQQPChk3pl9KJSFhKl0nH4kWx5vkqptk',
         parallel: false, // асинхронная загрузка всех картинок (по умолчанию: true)
         parallelMax: 2, // сколько за раз отправлять картинок на сервер (по умолчанию: 5)
         summarize: true // сообщения в консоль после сжатия (по умолчанию: false)

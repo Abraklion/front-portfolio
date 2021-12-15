@@ -4,6 +4,10 @@ module.exports = function () {
 
   $.gulp.task('scripts', () => {
 
+    $.gulp.src("src/assets/js/components/*.js")
+      .pipe($.gp.rigger())
+      .pipe($.gulp.dest($.config.output.pathJs));
+
     return $.gulp.src($.config.paths.js)
 
       .pipe($.gp.plumber())
