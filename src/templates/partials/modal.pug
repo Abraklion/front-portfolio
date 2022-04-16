@@ -2,49 +2,6 @@
 section.modal
   .container
     .modal__inner
-
-      h2.modal__title Автолидер
-
-      .modal__box
-        .modal__img
-          picture
-            source(media="(min-width: 768px) and (max-width: 991px)", srcset=`assets/img/avtolider-md.webp, assets/img/avtolider-md@2x.webp 2x, assets/img/avtolider-md@3x.webp 3x`, type="image/webp")
-            source(media="(min-width: 768px) and (max-width: 991px)", srcset=`assets/img/avtolider-md.png, assets/img/avtolider-md@2x.png 2x, assets/img/avtolider-md@3x.png 3x`, type="image/png")
-            source(media="(max-width: 767px), (min-width: 992px)", srcset=`assets/img/avtolider-all.webp, assets/img/avtolider-all@2x.webp 2x, assets/img/avtolider-all@3x.webp 3x`, type="image/webp")
-            img(src=`assets/img/avtolider-all.png`, srcset=`assets/img/avtolider-all@2x.png 2x, assets/img/avtolider-all@3x.png 3x`, loading="lazy", alt="")
-        ul.modal__list
-          li(title="Заказчик").modal__item.modal__item--company
-            | ИП “АвтоЛидер”
-          li(title="Тип сайта").modal__item.modal__item--type
-            | Корпоративный сайт
-          li.modal__item.modal__item--internet
-            a(href="https://avtolider.bashkiria.ru", target="_blank").modal__link Ссылка на проект
-          //  li.modal__item.modal__item--github
-          //  a(href="https://github.com/Abraklion", target="_blank").modal__link Ссылка на репозиторий
-
-      ul.modal__info
-        li.modal__info-list
-          .modal__info-subtitle Кратко о проекте:
-          p.modal__info-text Создать Landing page (визитку) с формой для консультации магазина запчастей “Автолидер”.
-        li.modal__info-list
-          .modal__info-subtitle Что было сделано мной:
-          p.modal__info-text Логика веб-приложения, дизайн, адаптивная верстка, интерактив средствами JavaScript, хостинг.
-        li.modal__info-list.modal__info-list--mb
-          .modal__info-subtitle Использовал Технологии:
-          ul.modal__technology
-            li.modal__technology-item Gulp
-            li.modal__technology-item HTML5
-            li.modal__technology-item CSS3
-            li.modal__technology-item SCSS
-            li.modal__technology-item JavaScript
-        li.modal__info-list
-          .modal__info-subtitle Принимали участие:
-          ul.modal__team
-            li.modal__team-item
-              a(href="https://github.com/ildarK90" target="_blank").modal__team-link Ильдар Кагарманов (backend)
-            li.modal__team-item
-              a(href="https://github.com/microbb" target="_blank").modal__team-link Вадим Арслангалин (backend)
-
       button(type="button" aria-label="Закрыть карточку").button__modal
 
 // /.modal

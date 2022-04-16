@@ -21,12 +21,6 @@
         "name" : "+7 (919) 148 66 69",
         "link" : "tel:+79191486669",
         "icon" : "phone-cont"
-      },
-      {
-        "name" : "Telegram",
-        "link" : "https://t.me/Abraklion",
-        "icon" : "telegram-cont",
-        "target" : "_blank"
       }
     ]
   }

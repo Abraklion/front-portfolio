@@ -146,12 +146,14 @@
 .contacts__item {
   margin: 0 0 18px 0;
 
-  &:nth-child(2){
-    margin-bottom: 0;
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
   }
 
-  &:nth-child(3){
-    display: none;
+  &:nth-child(2){
+    margin-bottom: 0;
   }
 
   @media (min-width: $viewport-sm) {
@@ -179,6 +181,7 @@
   vertical-align: middle;
 
   fill: $color-icon-contacts;
+
 }
 
 .contacts__link {
@@ -193,6 +196,12 @@
   color: $color-contacts;
 
   text-decoration: none;
+
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
 
   &:hover{
     text-decoration: underline;

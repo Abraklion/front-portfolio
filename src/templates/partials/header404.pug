@@ -11,7 +11,7 @@ header.header
       each item in jsonHeader.menu
         if (item.name === "Главная")
           li.menu__item
-            a(href="index.html", aria-label=item.name).menu__link
+            a(href="/", aria-label=item.name).menu__link
               svg(aria-hidden="true", width="27", height="27").menu__svg
                 use(xlink:href="assets/img/sprite.svg#" + item.icon)
         else

@@ -6,7 +6,7 @@ footer.footer
       ul.footer__social
         each item in jsonFooter.social
           li.footer__social-item
-            a(href=item.link, aria-label=item.name, target="_blank").footer__social-link
+            a(href=item.link, aria-label=item.name, rel="noopener", target="_blank").footer__social-link
               svg(aria-hidden="true", width="18", height="18").footer__social-svg
                 use(xlink:href="assets/img/sprite.svg#" + item.icon)
 

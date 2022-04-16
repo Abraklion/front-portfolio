@@ -21,7 +21,7 @@ section.biography#biography
             //- Цикл из dataBiography
             each item in jsonBiography.social
               li.biography__social-item
-                a(href=item.link, aria-label=item.name, title=item.name, target="_blank").biography__social-link
+                a(href=item.link, aria-label=item.name, title=item.name, rel="noopener", target="_blank").biography__social-link
                   svg(aria-hidden="true", width="15", height="15").biography__social-svg
                     use(xlink:href="assets/img/sprite.svg#" + item.icon)
 
