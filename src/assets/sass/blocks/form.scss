@@ -36,8 +36,6 @@
 
   transition: border 0.3s ease, color 0.3s ease, background-color 0.1s ease;
 
-  user-select: $blockText;
-
   &::selection{
     background-color: rgba($bgTextCopy,0.15);
 
