@@ -38,8 +38,16 @@
 
   user-select: $blockText;
 
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
   &::placeholder{
     color: rgba($color-contacts,0.3);
+
+    user-select: $blockText;
   }
 
   &:focus{
@@ -86,10 +94,16 @@
 
   resize: none;
 
-  user-select: $blockText;
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
 
   &::placeholder{
     color: rgba($color-contacts,0.3);
+
+    user-select: $blockText;
   }
 
   &:focus{
