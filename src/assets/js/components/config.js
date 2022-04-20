@@ -4,8 +4,10 @@
 
 const config = {
 
-  requestAllProject : 'https://portfolionikolay.herokuapp.com/api/projects/', // проекты
+  requestAllProject : 'https://portfolionikolay.herokuapp.com/api/projects/', // выводит проекты
 
-  requestSkills: 'https://portfolionikolay.herokuapp.com/api/catskill/' // категории и навыки
+  requestSkills: 'https://portfolionikolay.herokuapp.com/api/catskill/', // выводит категории и навыки
+
+  requestEmail: 'https://portfolionikolay.herokuapp.com/sendemail/' // для отправки письма
 
 }

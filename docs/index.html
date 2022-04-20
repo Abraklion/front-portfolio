@@ -13,6 +13,7 @@
   <meta name="author" content="Abraklion">
   <meta name="description" content="Проектирую и разрабатываю эффективные, семантические, доступные, адаптивные, оптимизированные веб-сайты используя лучшие практики.">
   <link rel="stylesheet" href="assets/css/style.min.css">
+  <script async src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="assets/js/app.min.js"></script>
 </head>
@@ -108,7 +109,7 @@
                     </a>
                   </li>
                   <li class="biography__social-item">
-                    <a class="biography__social-link" href="ссылка на скайп" aria-label="Skype" title="Skype" rel="noopener" target="_blank">
+                    <a class="biography__social-link" href="https://join.skype.com/invite/AIsydf8dZAZ0" aria-label="Skype" title="Skype" rel="noopener" target="_blank">
                       <svg class="biography__social-svg" aria-hidden="true" width="15" height="15">
                         <use xlink:href="assets/img/sprite.svg#skype-bio"></use>
                       </svg>
@@ -220,15 +221,15 @@
                 <form class="contacts__form form js-form" method="POST" action="/">
                   <div class="form__element">
                     <label class="visually-hidden" for="name">Имя</label>
-                    <input class="form__input" id="name" type="text" name="name" maxlength="20" placeholder="Имя">
+                    <input class="form__input" id="name" type="text" name="name" maxlength="20" placeholder="Имя" required>
                   </div>
                   <div class="form__element">
                     <label class="visually-hidden" for="email">Email</label>
-                    <input class="form__input" id="email" type="email" name="email" maxlength="40" placeholder="Email">
+                    <input class="form__input" id="email" type="email" name="email" maxlength="40" placeholder="Email" required>
                   </div>
                   <div class="form__element">
                     <label class="visually-hidden" for="messages">Ваше предложение</label>
-                    <textarea class="form__textarea" id="messages" name="messages" minlength="5" maxlength="1000" placeholder="Ваше предложение" spellcheck></textarea>
+                    <textarea class="form__textarea" id="messages" name="message" minlength="5" maxlength="1000" placeholder="Ваше предложение" spellcheck required></textarea>
                   </div>
                   <div class="form__element">
                     <button class="form__button button" type="submit" name="btn-form">Отправить</button>
@@ -252,7 +253,7 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a class="footer__social-link" href="ссылка на скайп" aria-label="Skype" rel="noopener" target="_blank">
+              <a class="footer__social-link" href="https://join.skype.com/invite/AIsydf8dZAZ0" aria-label="Skype" rel="noopener" target="_blank">
                 <svg class="footer__social-svg" aria-hidden="true" width="18" height="18">
                   <use xlink:href="assets/img/sprite.svg#skype-f"></use>
                 </svg>
@@ -271,13 +272,13 @@
       </div>
     </footer><!-- /.footer-->
   </div>
-  <section class="modal">
+  <div class="modal">
     <div class="container">
       <div class="modal__inner">
         <button class="button__modal" type="button" aria-label="Закрыть карточку"></button>
       </div>
     </div>
-  </section><!-- /.modal-->
+  </div><!-- /.modal-->
   <div class="up js-up">
     <button class="up__button" type="button">
       <span class="visually-hidden">Прокрутить наверх</span>

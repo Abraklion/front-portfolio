@@ -211,3 +211,25 @@
 .contacts__form{
 
 }
+
+.contacts__answer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  min-height: 304px;
+
+  @media (min-width: $viewport-md) {
+    min-height: 330px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    min-height: 339px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    min-height: 347px;
+  }
+}

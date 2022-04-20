@@ -8,16 +8,16 @@
 /*  Круговая диаграмма  |  http://rendro.github.io/easy-pie-chart  */
 //= ../library/jquery.easypiechart.js
 
+// погрузчик
+$('.skills')
+  .find('.skills__title')
+  .after('<div class="loader"></div>');
+
 /* =========================== ПРИ ЗАГРУЗКИ СТРАНИЦЫ ============================== */
 
 // отпрвляем fetch запрос на сервер и выводим категории навыков
 fetch(config.requestSkills,{method: 'get'})
   .then(res => {
-
-    // погрузчик
-    $('.skills')
-      .find('.skills__title')
-      .after('<div class="loader"></div>');
 
     // обрабатываем ответ от сервера
     if(res.ok){

@@ -14,7 +14,7 @@ $(".js-form").on("submit", function (e){
 
     email: this.email.value,
 
-    messages: this.messages.value
+    message: this.message.value
 
   }  // обьект всех полей формы и их значения
 
@@ -23,17 +23,20 @@ $(".js-form").on("submit", function (e){
   if(res){
 
     const options = {
-      method: 'post',
+      method: 'POST',
       headers : {
-        // 'Content-Type': 'application/x-www-form-urlencoded'
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
     }
 
-    fetch(`https://portfolionikolay.herokuapp.com/sendmail`,options).then(res => {
+    $(this).fadeOut(300,function (){
 
-      console.log(res)
+      $(this).after("<div class='contacts__answer'><div class='loader loader--center'></div></div>")
+
+    })
+
+    fetch(config.requestEmail,options).then(res => {
 
       // обрабатываем ответ от сервера
       if(res.ok){
@@ -43,12 +46,45 @@ $(".js-form").on("submit", function (e){
 
       }
 
-      throw new Error("Сервер ответил ошибкой на запрос: вывести список проектов из портфолио");
+      throw new Error("Сервер ответил ошибкой на запрос: отправить письмо");
 
     })
     .then(data => {
 
-      console.log(data)
+      if(data['answer']){
+
+        $(".loader").fadeOut(0, function (){
+
+          $(this).before(`
+          <div class='answer'>
+            <div class="answer__lottie">
+              <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_mtuaibjx.json"  background="transparent"  speed="1"  style="width: 166px; height: 166px;" autoplay></lottie-player>
+            </div>
+            <div class="answer__text"></div>
+          </div>
+        `)
+
+          $(".answer__text").fadeOut(0, function (){
+            $(this).text(`${data['answer']}!`)
+          }).fadeIn(1200)
+
+          $(this).remove()
+
+        })
+
+        setTimeout(() => {
+
+          $(".contacts__answer").remove();
+          this.reset()
+          $(this).fadeIn(500)
+
+        },2300)
+
+      } else {
+
+        throw new Error("Пришел некорректный ответ от сервера: отправить письмо");
+
+      }
 
     })
     .catch(err => {

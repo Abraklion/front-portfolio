@@ -19,14 +19,14 @@ $(".js-card__link").on("click",function (e){
 
   focusTrigger = this;
 
+  // погрузчик
+  $('.modal')
+    .find('.container')
+    .prepend('<div class="loader loader--center"></div>');
+
   // отпрвляем fetch запрос на сервер и выводим подробнно проект
   fetch(`${config.requestAllProject}${this.dataset.id}`,{method: 'get'})
     .then(res => {
-
-      // погрузчик
-      $('.modal')
-        .find('.container')
-        .prepend('<div class="loader loader--center"></div>');
 
       // обрабатываем ответ от сервера
       if (res.ok) {
@@ -128,7 +128,7 @@ function renderFullPost(fullPost, options = {}) {
 
   // Шаблон
   return `
-    <h2 class="modal__title">${fullPost.p_name}</h2>
+    <div class="modal__title">${fullPost.p_name}</div>
     <div class="modal__box">
       <div class="modal__img">
         <picture>
