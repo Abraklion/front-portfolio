@@ -10,9 +10,9 @@ section.portfolio#portfolio
         each item in jsonPortfolio.tab
           li.portfolio__tab-item
             if item.active
-              a(href="", data-tab= item.name, tabindex="-1", class=`portfolio__tab-link ${item.active}`)= item.name
+              a(href="#", data-tab= item.name, tabindex="-1", class=`portfolio__tab-link ${item.active}`)= item.name
             else
-              a(href="", data-tab= item.name).portfolio__tab-link= item.name
+              a(href="#", data-tab= item.name).portfolio__tab-link= item.name
 
       ul.portfolio__list
         li.portfolio__item.portfolio__item--hide
